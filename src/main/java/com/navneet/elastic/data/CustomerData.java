@@ -6,6 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author navneetprabhakar
+ * Data Object for response
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,6 +24,10 @@ public class CustomerData  {
     private Address currentAddress;
     private Address permanentAddress;
 
+    /**
+     * Mapper constructor
+     * @param info
+     */
     public CustomerData(CustomerInfo info){
         this.id=info.getId();
         this.customerId=info.getCustomerId();

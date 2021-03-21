@@ -2,6 +2,9 @@ package com.navneet.elastic.data.model;
 
 import lombok.Data;
 
+/**
+ * @author navneetprabhakar
+ */
 @Data
 public class Address {
 

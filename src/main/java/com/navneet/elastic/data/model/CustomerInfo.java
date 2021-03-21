@@ -7,7 +7,11 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document(indexName = "customer1")
+/**
+ * @author navneetprabhakar
+ * ES Index document
+ */
+@Document(indexName = "customer")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,6 +27,10 @@ public class CustomerInfo {
     private Address currentAddress;
     private Address permanentAddress;
 
+    /**
+     * Mapper constructor
+     * @param data
+     */
     public CustomerInfo(CustomerData data){
         this.id=data.getId();
         this.customerId=data.getCustomerId();

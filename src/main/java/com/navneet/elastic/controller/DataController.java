@@ -9,12 +9,20 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * @author navneetprabhakar
+ */
 @RestController
 @RequestMapping("v1/data")
 public class DataController {
     @Autowired
     private DataService dataService;
 
+    /**
+     * API to add data in ES Index
+     * @param request
+     * @return
+     */
     @PostMapping("add")
     public DataResponse<String> addESData(@RequestBody DataRequest<CustomerData> request){
         dataService.insertCustomerInfo(request.getData());
